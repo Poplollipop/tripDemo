@@ -1,18 +1,17 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    @if (showFiller) {
-      <p>Lorem, ipsum dolor sit amet consectetur.</p>
-    }
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+<mat-drawer-container class="container">
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <p>發現</p>
+    <p>商城</p>
+    <p>排行榜</p>
+    <p>Q&A</p>
+    ----------
+    <p>登入/註冊</p>
   </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
+  <div class="sidenav-content">
+    <button type="button" mat-button 
+    (mouseenter)="drawer.open()"
+    (mouseleave)="closeDrawerWithDelay()">
+      側導覽列
     </button>
   </div>
-
 </mat-drawer-container>
